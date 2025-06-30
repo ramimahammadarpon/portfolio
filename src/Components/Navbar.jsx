@@ -38,7 +38,7 @@ const Navbar = () => {
         return ()=> window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY, isHidden]);
   return (
-    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm md:px-20 z-50">
+    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm lg:px-20 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

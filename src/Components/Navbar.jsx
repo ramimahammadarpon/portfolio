@@ -1,8 +1,40 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-scroll";
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
+    const navRef = useRef(null);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isHidden, setIsHidden] = useState(false);
+    const link = <>
+        <Link to="Home" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true}>Home</Link>
+        <Link to="AboutMe" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth>About Me</Link>
+        <Link to="Skills" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true}>Skills</Link>
+    </>
+
+    useEffect(()=> {
+        const handleScroll = () => {
+            const currentScroll = window.scrollY
+            console.log(currentScroll);
+
+            if(currentScroll>200 && currentScroll>lastScrollY && !isHidden){
+                gsap.to(navRef.current, {y: "-100%", duration: 0.4, ease: "power2.out"})
+                setIsHidden(true);
+            }
+            else if(currentScroll<lastScrollY && isHidden){
+                gsap.to(navRef.current, {y: "0%", duration:0.4, ease: "power2.out"});
+                setIsHidden(false);
+            }
+
+            setLastScrollY(currentScroll);
+        }
+        window.addEventListener("scroll", handleScroll);
+
+        return ()=> window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY, isHidden]);
   return (
-    <div className="navbar bg-base-100 shadow-sm px-20">
+    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm px-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,52 +58,18 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {link}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <img className="w-20" src={logo} alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+         {link}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn btn-primary text-accent text-accent">Resume</a>
       </div>
     </div>
   );

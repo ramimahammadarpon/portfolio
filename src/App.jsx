@@ -7,7 +7,7 @@ import Skills from './Components/Skills'
 function App() {
 
   return (
-    <div>
+    <div className='poppins'>
       <header>
         <Navbar></Navbar>
         <Banner></Banner>

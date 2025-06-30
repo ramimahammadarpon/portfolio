@@ -8,9 +8,10 @@ const Navbar = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isHidden, setIsHidden] = useState(false);
     const link = <>
-        <Link to="Home" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true}>Home</Link>
-        <Link to="AboutMe" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth>About Me</Link>
-        <Link to="Skills" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true}>Skills</Link>
+        <Link to="Home" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true} onSetActive={()=> document.title="Home | Ramim"}>Home</Link>
+        <Link to="AboutMe" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true} onSetActive={()=> document.title="About Me | Ramim"}>About Me</Link>
+        <Link to="Skills" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true} onSetActive={()=> document.title="Skills | Ramim"}>Skills</Link>
+        <Link to="ContactMe" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true} onSetActive={()=> document.title="Contact Me | Ramim"}>Contact Me</Link>
     </>
 
     useEffect(()=> {
@@ -69,7 +70,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary text-accent text-accent">Resume</a>
+        <a href="../assets/cv.pdf" download className="btn btn-secondary text-accent">Resume</a>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const Aboutme = () => {
   return (
     <section
       id="AboutMe"
-      className="min-h-screen md:py-16 px-6 lg:px-32 bg-base-100 text-base-content"
+      className="my-10 lg:my-20 px-6 lg:px-32 bg-base-100 text-base-content"
     >
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-primary">About Me</h2>
@@ -13,12 +13,12 @@ const Aboutme = () => {
           Mir Ramim Ahammad Arpon -Web Developer
         </p>
       </div>
-      <div className="md:flex items-center">
-         <div className="md:w-4/10">
+      <div className="lg:flex items-center">
+         <div className="lg:w-4/10">
           <img src={about} alt="" />
         </div>
-        <div className="max-w-4xl mx-auto md:w-6/10">
-          <div className="card bg-base-200 md:p-8 space-y-6">
+        <div className="max-w-4xl mx-auto lg:w-6/10">
+          <div className="card bg-base-200 lg:p-8 space-y-6">
             <p>
               👋 Hi! I'm a passionate and curious developer whose journey into
               programming began quite unexpectedly. It all started during my

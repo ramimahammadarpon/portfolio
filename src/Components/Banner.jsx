@@ -8,9 +8,9 @@ import cv from "/cv.pdf";
 
 const Banner = () => {
   return (
-    <div id="Home" className="min-h-[80vh] md:mx-20 md:mt-20 bg-slate-200">
-      <div className="flex flex-col-reverse md:flex-row items-center md:px-10">
-        <div className="md:w-1/2">
+    <div id="Home" className="min-h-[80vh] lg:mx-20 px-6 mt-10 lg:mt-20 bg-slate-200">
+      <div className="flex flex-col-reverse lg:flex-row items-center lg:px-10">
+        <div className="lg:w-1/2">
           <h3 className="font-bold text-4xl text-primary mb-3">
             Mir Ramim Ahammad Arpon
           </h3>
@@ -45,7 +45,7 @@ const Banner = () => {
             Resume
           </a>
         </div>
-        <div className="md:w-1/2 flex justify-center md:justify-end py-20">
+        <div className="lg:w-1/2 flex justify-center lg:justify-end py-20">
           <figure className="w-4/9 bg-primary border-8 border-secondary rounded-xl overflow-hidden">
             <img src={myImage} className="" alt="" />
           </figure>

@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SkillCard = ({ title, skills, cardRef }) => (
   <div ref={cardRef} className="card bg-base-200 p-6 opacity-0">
     <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
-    <div className="grid grid-cols-3 md:grid-cols-1 gap-5 items-center justify-center text-5xl text-primary">
+    <div className="grid grid-cols-3 md:grid-cols-6 justify-center gap-5 items-center text-5xl text-primary">
       {skills.map((skill, idx) => (
         <div
           key={idx}
@@ -88,10 +88,10 @@ const Skills = () => {
   return (
     <section
       id="Skills"
-      className="min-h-screen py-16 px-6 lg:px-24 bg-base-100 text-base-content"
+      className="px-6 mb-10 lg:mb-20 lg:px-24 bg-base-100 text-base-content"
     >
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold">Skills</h2>
+      <div className="text-center mb-5">
+        <h2 className="text-4xl text-primary font-bold">Skills</h2>
         <p className="text-lg text-gray-500 mt-2">Technologies I use and love</p>
       </div>
 

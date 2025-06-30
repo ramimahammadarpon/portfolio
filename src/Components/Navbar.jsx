@@ -13,6 +13,7 @@ const Navbar = () => {
         <Link to="Home" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true} onSetActive={()=> document.title="Home | Ramim"}>Home</Link>
         <Link to="AboutMe" duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" activeClass="bg-primary text-accent" spy={true} smooth={true} onSetActive={()=> document.title="About Me | Ramim"}>About Me</Link>
         <Link to="Skills" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true} onSetActive={()=> document.title="Skills | Ramim"}>Skills</Link>
+         <Link to="MyProjects" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true} onSetActive={()=> document.title="My Projects | Ramim"}>My Projects</Link>
         <Link to="ContactMe" activeClass="bg-primary text-accent" spy={true}  duration={500} className="px-4 py-2 cursor-pointer rounded-lg text-accent font-medium" smooth={true} onSetActive={()=> document.title="Contact Me | Ramim"}>Contact Me</Link>
     </>
 
@@ -37,7 +38,7 @@ const Navbar = () => {
         return ()=> window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY, isHidden]);
   return (
-    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm px-20 z-50">
+    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm md:px-20 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

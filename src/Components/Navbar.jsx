@@ -37,7 +37,7 @@ const Navbar = () => {
         return ()=> window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY, isHidden]);
   return (
-    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm px-20">
+    <div ref={navRef} className="navbar fixed top-0 bg-base-100 shadow-sm px-20 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a onClick={()=> window.open(`${cv}`, "_blank")} href={cv} download="MirRamimCV.pdf" className="btn btn-secondary text-accent">Resume</a>
+        <a onClick={()=> window.open(`${cv}`, "_blank")} href={cv} download="MirRamimCV.pdf" className="btn btn-secondary">Resume</a>
       </div>
     </div>
   );

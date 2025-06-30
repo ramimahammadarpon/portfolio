@@ -1,0 +1,59 @@
+[
+  {
+    "projectId": "academia-pro",
+    "name": "AcademiaPro",
+    "techStack": ["React.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT"],
+    "description": "AcademiaPro is a course management platform that streamlines communication between teachers and students. It offers features like class schedules, assignment submissions, and grading.",
+    "liveLink": "https://b11a11-course-management-system-ramim.netlify.app/",
+    "githubRepo": "https://github.com/ramimahammadarpon/academiaPro",
+    "projectImage": "https://i.ibb.co/cStbmj3J/image.png",
+    "challengesFaced": [
+      "Implementing dynamic role-based access control",
+      "Managing complex data relationships between users, courses, and assignments",
+      "Ensuring smooth form validation and data consistency"
+    ],
+    "futurePlans": [
+      "Add real-time chat between teachers and students",
+      "Integrate notifications and calendar sync",
+      "Build a mobile-friendly version of the app"
+    ]
+  },
+  {
+    "projectId": "project-buddies",
+    "name": "ProjectBuddies",
+    "techStack": ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "JWT", "SweetAlert2"],
+    "description": "ProjectBuddies is a collaboration platform where developers can find and join projects. Users can create projects, invite others, or browse open projects to join.",
+    "liveLink": "https://b11-a10-ramim-ahammad-projectbuddies.netlify.app/",
+    "githubRepo": "https://github.com/ramimahammadarpon/projectBuddies",
+    "projectImage": "https://i.ibb.co/8Dzr9PMR/image.png",
+    "challengesFaced": [
+      "Designing an intuitive UI for project discovery and collaboration",
+      "Maintaining secure user authentication with role-based logic",
+      "Handling large-scale user and project data effectively"
+    ],
+    "futurePlans": [
+      "Add team chat and file-sharing functionality",
+      "Implement a rating system for contributors",
+      "Optimize project recommendations using AI"
+    ]
+  },
+  {
+    "projectId": "app-emphorium",
+    "name": "AppEmphorium",
+    "techStack": ["React.js", "Firebase", "Tailwind CSS", "React Router"],
+    "description": "AppEmphorium is an online marketplace for showcasing and selling web and mobile applications. Developers can list apps, and users can browse and explore featured applications.",
+    "liveLink": "https://ramim-ahammad-b11-a9-app-store.netlify.app/",
+    "githubRepo": "https://github.com/ramimahammadarpon/appEmphorium",
+    "projectImage": "https://i.ibb.co/Y4J0SQGs/image.png",
+    "challengesFaced": [
+      "Setting up Firebase for authentication and hosting",
+      "Creating a responsive and aesthetic grid layout for app listings",
+      "Ensuring scalability for large numbers of app uploads"
+    ],
+    "futurePlans": [
+      "Add payment integration for buying/selling apps",
+      "Introduce advanced filtering and search options",
+      "Enable review and feedback system"
+    ]
+  }
+]

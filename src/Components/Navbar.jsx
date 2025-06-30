@@ -1,7 +1,9 @@
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+import cv from '../../public/cv.pdf'
+
 
 const Navbar = () => {
     const navRef = useRef(null);
@@ -70,7 +72,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a href="../assets/cv.pdf" download className="btn btn-secondary text-accent">Resume</a>
+        <a onClick={()=> window.open(`${cv}`, "_blank")} href={cv} download="MirRamimCV.pdf" className="btn btn-secondary text-accent">Resume</a>
       </div>
     </div>
   );
